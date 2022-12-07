@@ -5,19 +5,9 @@ require("dotenv").config()
 const express = require("express")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
-const mongoose = require("mongoose")
+const ShoeRouter = require("./controllers/shoe")
 
 const app = express()
-
-/********************************** */
-// DATABASE CONNECTION
-/********************************** */
-mongoose.connect(process.env.DATABASE_URL)
-
-mongoose.connection
-.on("open", () => console.log("Mongo Connected"))
-.on("close", () => console.log("Mongo Disconnected"))
-.on("error", () => console.log(error))
 
 /********************************** */
 // MIDDLEWARE
@@ -26,7 +16,11 @@ app.use(morgan("dev"))
 app.use(methodOverride("_method"))
 app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))
+app.use("/shoes", ShoeRouter)
 
+/********************************** */
+// HOME ROUTE
+/********************************** */
 app.get("/", (req, res) => {
     res.send("<h1>Server is Working</h1>")
 })
