@@ -3,5 +3,19 @@
 <%- include("../partials/head.ejs")%>
 <body>
     <h1>NEW PAGE</h1>
+    <main>
+        <div>
+            <form action="/shoes" method="POST">
+                NAME: <input type="text" name="name" placeholder="Enter Name"><br>
+                PRICE: <input type="text" name="price" placeholder="Enter Price"><br>
+                COLORWAY: <input type="text" name="colorway" placeholder="Enter Colorway"><br>
+                YEAR RELEASED: <input type="text" name="yearReleased" placeholder="Enter Year Released"><br>
+                OWNED? <input type="checkbox" name="isOwned"><br>
+                RETRO? <input type="checkbox" name="isRetro"><br>
+                IMAGE: <input type="url" name="img"><br>
+                <input type="submit" value="Add Shoe">
+            </form>
+        </div>
+    </main>
 </body>
 </html>
