@@ -30,27 +30,48 @@ router.get("/new", (req, res) => {
 
 // CREATE ROUTE - POST
 router.post("/", (req, res) => {
-
+    req.body.isRetro = req.body.isRetro === "on" ? true : false
+    req.body.isOwned = req.body.isOwned === "on" ? true : false
+    Shoe.create(req.body)
+    .then((createdFruit) => {
+        res.redirect("/shoes")
+    })
+    .catch(err => console.log(err))
 })
 
 // EDIT ROUTE - GET
 router.get("/:id/edit", (req, res) => {
-
+    Shoe.findById(req.params.id)
+    .then((foundShoe) => {
+        res.render("shoes/edit.ejs", { shoe: foundShoe })
+    })
 })
 
 // UPDATE ROUTE - PUT
 router.put("/:id", (req, res) => {
-
+    req.body.isRetro = req.body.isRetro === "on" ? true : false
+    req.body.isOwned = req.body.isOwned === "on" ? true : false
+    Shoe.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedShoe) => {
+        res.redirect(`/shoes/${req.params.id}`)
+    })
 })
 
 // DELETE ROUTE - DELETE
 router.delete("/:id", (req, res) => {
-
+    Shoe.findByIdAndDelete(req.params.id)
+    .then((deletedShoe) => {
+        res.redirect("/shoes")
+    })
+    .catch(err => console.log(err))
 })
 
 // SHOW ROUTE - GET
 router.get("/:id", (req, res) => {
-
+    // Go and get shoe from database
+    Shoe.findById(req.params.id)
+    .then((shoe) => {
+        res.render("shoes/show.ejs", { shoe })
+    })
 })
 
 /********************************** */
