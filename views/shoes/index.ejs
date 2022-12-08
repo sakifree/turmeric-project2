@@ -2,6 +2,12 @@
 <html lang="en">
 <%- include("../partials/head.ejs")%>
 <body>
-    
+    <main>
+        <div>
+            <% for (shoe of shoes) { %>
+                <a href="/shoes/<%= shoe._id %>"><img src="<%= shoe.img %>" alt="<%= shoe.name%>" id="index_img"></a>
+            <% } %>
+        </div>
+    </main>
 </body>
 </html>

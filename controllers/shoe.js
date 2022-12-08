@@ -15,7 +15,12 @@ const router = express.Router()
 
 // INDEX ROUTE - GET
 router.get("/", (req, res) => {
-
+    // Get all shoes from mongo and send them back
+    Shoe.find({})
+    .then((shoes) => {
+        res.render("shoes/index.ejs", { shoes })
+    })
+    .catch(err => console.log(err))
 })
 
 // NEW ROUTE - GET
@@ -40,7 +45,7 @@ router.put("/:id", (req, res) => {
 
 // DELETE ROUTE - DELETE
 router.delete("/:id", (req, res) => {
-    
+
 })
 
 // SHOW ROUTE - GET
