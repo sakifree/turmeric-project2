@@ -45,6 +45,7 @@ router.get("/:id/edit", (req, res) => {
     .then((foundShoe) => {
         res.render("shoes/edit.ejs", { shoe: foundShoe })
     })
+    .catch(err => console.log(err))
 })
 
 // UPDATE ROUTE - PUT

@@ -2,6 +2,16 @@
 <html lang="en">
 <%- include("../partials/head.ejs")%>
 <body>
-    <h1>SHOW PAGE</h1>
+    <h1><%= shoe.name %></h1>
+    <main>
+        <div>
+            <img src="<%= shoe.img %>" alt="<%= shoe.name %>" id="show-img"><br>
+            PRICE: $<%= shoe.price %> <br>
+            YEAR RELEASED: <%= shoe.yearReleased %> <br>
+            COLORWAY: <%= shoe.colorway %> <br>
+            OWNED: <%= shoe.isOwned ? "Yes" : "No" %> <br>
+            RETRO: <%= shoe.isRetro ? "Yes" : "No" %> <br>
+        </div>
+    </main>
 </body>
 </html>
