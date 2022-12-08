@@ -13,7 +13,6 @@ const shoesSchema = new Schema({
     price: Number,
     img: String,
     yearReleased: Number,
-    desciption: String,
     colorway: String,
     isOwned: Boolean,
     isRetro: Boolean,
