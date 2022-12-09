@@ -3,7 +3,7 @@
 <%- include("../partials/head.ejs")%>
 <body>
     <main>
-        <div id="index-container">
+        <div class="container">
             <% for (shoe of shoes) { %>
                 <a href="/shoes/<%= shoe._id %>"><img src="<%= shoe.img %>" alt="<%= shoe.name%>" id="index-img"></a>
             <% } %>

@@ -4,7 +4,7 @@
 <body>
     <h1>EDIT PAGE</h1>
     <main>
-        <div>
+        <div class="container">
             <form action="/shoes/<%= shoe._id %>?_method=PUT" method="POST">
                 <h2>EDIT <%= shoe.name %></h2>
                 NAME: <input type="text" name="name" value="<%= shoe.name %>" placeholder="Enter Name"><br>
