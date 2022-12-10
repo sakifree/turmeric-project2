@@ -9,6 +9,14 @@ const Shoe = require("../models/shoe")
 /********************************** */
 const router = express.Router()
 
+router.use((req, res, next) => {
+    if(req.session.loggedIn) {
+        next()
+    } else {
+        res.redirect("/user/login")
+    }
+})
+
 /********************************** */
 // ROUTES - INDEX, NEW, UPDATE, CREATE, EDIT, DELETE, SHOW
 /********************************** */
