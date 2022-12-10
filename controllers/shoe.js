@@ -24,9 +24,9 @@ router.use((req, res, next) => {
 // INDEX ROUTE - GET
 router.get("/", (req, res) => {
     // Get all shoes from mongo and send them back
-    Shoe.find({})
+    Shoe.find({ username: req.session.username })
     .then((shoes) => {
-        res.render("shoes/index.ejs", { shoes })
+        res.render("shoes/index.ejs", { shoes, user: req.session.username })
     })
     .catch(err => console.log(err))
 })
