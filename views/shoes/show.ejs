@@ -2,6 +2,12 @@
 <html lang="en">
 <%- include("../partials/head.ejs")%>
 <body>
+    <div class="navbar">
+        <a href="/shoes">Home</a>
+        <a href="/shoes/new">New</a>
+        <a href="/shoes/<%= shoe._id %>/edit">Edit</a>
+        <a href="/user/logout">Logout</a>
+    </div>
     <h1><%= shoe.name %></h1>
     <main>
         <div class="container">
@@ -12,11 +18,9 @@
                 COLORWAY: <%= shoe.colorway %> <br>
                 OWNED: <%= shoe.isOwned ? "Yes" : "No" %> <br>
                 RETRO: <%= shoe.isRetro ? "Yes" : "No" %> <br>
-                <a href="/shoes/<%= shoe._id %>/edit"><button>EDIT</button></a>
                 <form action="/shoes/<%= shoe._id %>?_method=DELETE" method="POST">
                     <input type="submit" value="DELETE">
                 </form>
-                <a href="/shoes"><button>INDEX</button></a>
             </div>
         </div>
     </main>

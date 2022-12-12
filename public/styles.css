@@ -89,3 +89,22 @@ nav a {
     text-align: center;
     font-size: 50px;
 }
+
+.navbar {
+    display: block;
+    text-align: left;
+    width: 100%;
+    background-color: lightslategrey;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 14px 10px;
+    text-align: center;
+    color: white;
+}
+
+a:hover {
+    color: lightgreen;
+}

@@ -2,18 +2,24 @@
 <html lang="en">
 <%- include("../partials/head.ejs")%>
 <body>
-    <h1>NEW PAGE</h1>
+    <%- include("../partials/header.ejs")%>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <h1>New Addition</h1>
     <main>
-        <div>
+        <div class="container">
             <form action="/shoes" method="POST">
-                NAME: <input type="text" name="name" placeholder="Enter Name"><br>
-                PRICE: <input type="text" name="price" placeholder="Enter Price"><br>
-                COLORWAY: <input type="text" name="colorway" placeholder="Enter Colorway"><br>
-                YEAR RELEASED: <input type="text" name="yearReleased" placeholder="Enter Year Released"><br>
-                OWNED? <input type="checkbox" name="isOwned"><br>
-                RETRO? <input type="checkbox" name="isRetro"><br>
-                IMAGE: <input type="url" name="img"><br>
-                <input type="submit" value="Add Shoe">
+                Name: <input type="text" name="name" placeholder="Enter Name"><br>
+                Price: <input type="text" name="price" placeholder="Enter Price"><br>
+                Colorway: <input type="text" name="colorway" placeholder="Enter Colorway"><br>
+                Year Released: <input type="text" name="yearReleased" placeholder="Enter Year Released"><br>
+                Owned? <input type="checkbox" name="isOwned"><br>
+                Retro? <input type="checkbox" name="isRetro"><br>
+                Image: <input type="url" name="img" placeholder="Add Image URL"><br>
+                <input type="submit" value="Add">
             </form>
         </div>
     </main>

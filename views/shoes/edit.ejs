@@ -2,18 +2,18 @@
 <html lang="en">
 <%- include("../partials/head.ejs")%>
 <body>
-    <h1>EDIT PAGE</h1>
+    <%- include("../partials/header.ejs")%>
     <main>
         <div class="container">
             <form action="/shoes/<%= shoe._id %>?_method=PUT" method="POST">
-                <h2>EDIT <%= shoe.name %></h2>
-                NAME: <input type="text" name="name" value="<%= shoe.name %>" placeholder="Enter Name"><br>
-                PRICE: <input type="text" name="price" value="<%= shoe.price %>" placeholder="Enter Price"><br>
-                COLORWAY: <input type="text" name="colorway" value="<%= shoe.colorway %>" placeholder="Enter Colorway"><br>
-                YEAR RELEASED: <input type="text" name="yearReleased" value="<%= shoe.yearReleased %>" placeholder="Enter Year Released"><br>
-                OWNED? <input type="checkbox" name="isOwned" <%= shoe.isOwned ? "checked" : "" %>><br>
-                RETRO? <input type="checkbox" name="isRetro" <%= shoe.isRetro ? "checked" : "" %>><br>
-                IMAGE: <input type="url" name="img" value="<%= shoe.img %>" placeholder="Enter Image URL"><br>
+                <h2>Edit <%= shoe.name %></h2>
+                Name: <input type="text" name="name" value="<%= shoe.name %>" placeholder="Enter Name"><br>
+                Price: <input type="text" name="price" value="<%= shoe.price %>" placeholder="Enter Price"><br>
+                Colorway: <input type="text" name="colorway" value="<%= shoe.colorway %>" placeholder="Enter Colorway"><br>
+                Year Released: <input type="text" name="yearReleased" value="<%= shoe.yearReleased %>" placeholder="Enter Year Released"><br>
+                Owned? <input type="checkbox" name="isOwned" <%= shoe.isOwned ? "checked" : "" %>><br>
+                Retro? <input type="checkbox" name="isRetro" <%= shoe.isRetro ? "checked" : "" %>><br>
+                Image: <input type="url" name="img" value="<%= shoe.img %>" placeholder="Enter Image URL"><br>
                 <input type="submit" value="Update <%= shoe.name %>">
             </form>
         </div>

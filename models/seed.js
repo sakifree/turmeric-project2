@@ -17,7 +17,8 @@ mongoose.connection.on("open", () => {
       yearReleased: 2022,
       colorway: "White/Medium Olive-White",
       isOwned: true,
-      isRetro: false }, 
+      isRetro: false,
+      username: "example" }, 
 
       { name: "Air Jordan 1 Retro High OG 'Starfish'",
       price: 180,
@@ -25,7 +26,8 @@ mongoose.connection.on("open", () => {
       yearReleased: 2022,
       colorway: "White/Starfish/Cacao Wow/Sail",
       isOwned: true,
-      isRetro: true }, 
+      isRetro: true, 
+      username: "example" }, 
 
       { name: "Adidas Yeezy 500 'Taupe Light'",
       price: 200,
@@ -33,7 +35,8 @@ mongoose.connection.on("open", () => {
       yearReleased: 2021,
       colorway: "Taupe Light",
       isOwned: false,
-      isRetro: false }, 
+      isRetro: false, 
+      username: "example" }, 
 
       { name: "New Balance 9060 'Ivory'",
       price: 150,
@@ -41,7 +44,8 @@ mongoose.connection.on("open", () => {
       yearReleased: 2022,
       colorway: "Ivory Cream/Pink Sand/Light Moonstone",
       isOwned: false,
-      isRetro: false }, 
+      isRetro: false, 
+      username: "example" }, 
 
       { name: "Jordan 1 Retro High OG 'Pine Green'",
       price: 170,
@@ -49,7 +53,8 @@ mongoose.connection.on("open", () => {
       yearReleased: 2020,
       colorway: "Black/White-Pine Green/Gym Red Orange",
       isOwned: true,
-      isRetro: true }, 
+      isRetro: true, 
+      username: "example" }, 
     ]
 
     // Delete all shoes
