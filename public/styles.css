@@ -1,5 +1,5 @@
 html {
-    background-color: #9DB4C0;
+    background-color: #7697A7;
     font-family: 'Amatic SC', cursive;
     font-size: 1.5em;
     color: white;
@@ -52,8 +52,8 @@ nav a {
 }
 
 #show-img {
-    width: 500px;
-    height: 350px;
+    width: 50%;
+    height: 25%;
     border: 5px solid;
     border-color: #253237;
     border-radius: 10px;
@@ -94,7 +94,7 @@ nav a {
     display: block;
     text-align: left;
     width: 100%;
-    background-color: #5C6B73;
+    background-color: #354045;
     padding: 10px;
 }
 
