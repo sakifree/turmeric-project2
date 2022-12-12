@@ -40,6 +40,9 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
     req.body.isRetro = req.body.isRetro === "on" ? true : false
     req.body.isOwned = req.body.isOwned === "on" ? true : false
+
+    req.body.username = req.session.username
+
     Shoe.create(req.body)
     .then((createdFruit) => {
         res.redirect("/shoes")
