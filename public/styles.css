@@ -1,5 +1,5 @@
 html {
-    background-color: #212F3D;
+    background-color: #9DB4C0;
     font-family: 'Amatic SC', cursive;
     font-size: 1.5em;
     color: white;
@@ -55,7 +55,7 @@ nav a {
     width: 500px;
     height: 350px;
     border: 5px solid;
-    border-color: lightseagreen;
+    border-color: #253237;
     border-radius: 10px;
 }
 
@@ -63,7 +63,7 @@ nav a {
     display: block;
     text-align: left;
     width: 100%;
-    background-color: lightslategrey;
+    background-color: #5C6B73;
     padding: 10px;
 }
 
@@ -94,7 +94,7 @@ nav a {
     display: block;
     text-align: left;
     width: 100%;
-    background-color: lightslategrey;
+    background-color: #5C6B73;
     padding: 10px;
 }
 
@@ -106,5 +106,5 @@ nav a {
 }
 
 a:hover {
-    color: lightgreen;
+    color: #9DB4C0;
 }
