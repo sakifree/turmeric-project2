@@ -4,6 +4,10 @@ html {
     font-size: 1.5em;
 }
 
+body {
+    margin: -1px;
+}
+
 .container {
     width: 100%;
     margin: auto;
@@ -40,3 +44,17 @@ html {
     border-radius: 10px;
 }
 
+#main-navbar {
+    display: block;
+    text-align: left;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+}
+
+#main-navbar a {
+    text-decoration: none;
+    padding: 14px 10px;
+    text-align: center;
+    color: white;
+}
