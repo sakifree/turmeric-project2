@@ -3,19 +3,22 @@
     <%- include("../partials/head.ejs") %>
 <body>
     <main>
-        <div>
+        <nav>
+            <a href="/">BACK</a>
+        </nav>
+        <div class="user-container">
+            <div>
             <form action="/user/signup" method="POST">
-                <fieldset>
-                    <legend>New User</legend>
+                    <legend>Signup</legend>
                     <label>
-                        USERNAME: <input type="text" name="username" required>
-                    </label>
+                        Username: <input type="text" name="username" required>
+                    </label><br>
                     <label>
-                        PASSWORD: <input type="password" name="password" required>
-                    </label>
-                    <input type="submit" value="Create Account">
-                </fieldset>
+                        Password: <input type="password" name="password" required>
+                    </label><br>
+                    <input type="submit" value="Signup">
             </form>
+            </div>
         </div>
     </main>
 </body>
